@@ -47,7 +47,7 @@ export default {
   $color-light-grey: #F5F5F5;
   $color-orange: #ff6d00;
   nav {
-    box-shadow: 2px 2px 1px $color-light-grey;
+    box-shadow: 0px 2px 1px $color-light-grey;
   }
   .navbar-light .container-md>a {
     font-size: 2.3rem;
