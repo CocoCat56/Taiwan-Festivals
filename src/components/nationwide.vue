@@ -1,6 +1,8 @@
 <template>
-  <div class="container-md">
-    <h4>全國級</h4>
+  <div class="wrap">
+    <div class="titleText">
+      <h2>全國級</h2>
+    </div>
     <festivals></festivals>
   </div>
 </template>
@@ -20,10 +22,16 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-  .container-md {
-    padding-top: 100px;
+  .wrap {
+    padding-top: 70px;
   }
-  h4 {
-    margin-left: 2rem;
+  .titleText {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  h2 {
+    color: #fff;
+    background-color: #01937C;
+    padding: 30px;
   }
 </style>
