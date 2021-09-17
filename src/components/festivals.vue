@@ -60,8 +60,7 @@ export default {
                 return item.levelName.match(vm.nationwide);
             });
         } else {
-            return vm.festivals;
-            // return vm.festivals.splice(0, 10);
+          return vm.festivals;
         }
     }
   }
@@ -72,7 +71,7 @@ export default {
 <style lang="scss" scoped>
   $color-orange: #ff6d00;
   .container-md {
-    padding: 2rem 0;
+    padding-bottom: 2rem;
   }
   .card {
     border: none;
