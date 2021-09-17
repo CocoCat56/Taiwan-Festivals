@@ -1,5 +1,5 @@
 <template>
-  <div class="container-md">
+  <div class="container-md searchContent">
     <h4>Search：{{searchText}}</h4>
     <festivals></festivals>
   </div>
@@ -29,10 +29,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-  .container-md {
+  .container-md.searchContent {
     padding-top: 100px;
   }
   h4 {
-      margin-left: 2rem;
+      margin: 0 0 2rem 2rem;
   }
 </style>
