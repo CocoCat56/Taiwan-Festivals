@@ -41,7 +41,7 @@ export default {
     const api = "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindFestivalTypeJ";
     vm.$http.get(api)
       .then(function(data) {
-        vm.banner = data.data[0];
+        vm.banner = data.data[4];
         vm.banner.imageUrl = "https://cloud.culture.tw/" + vm.banner.imageUrl;
       });
   }
@@ -72,13 +72,13 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba($color-black, 0.5);
+    background-color: rgba($color-black, 0.2);
   }
   .search {
     position: absolute;
-    top: 35%;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     h3 {
       color: $color-white;
       margin-bottom: 2vw;
