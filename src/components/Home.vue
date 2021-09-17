@@ -1,13 +1,13 @@
 <template>
   <div class="wrap">
     <div class="banner">
-      <div class="bannerImg" v-for="(item, key) in bannerData" :key="key">
-        <img :src="`https://cloud.culture.tw${item.imageUrl}`" class="d-block w-100" :alt="item.actName" :title="item.actName">
+      <div class="bannerImg">
+        <img :src="banner.imageUrl" class="d-block w-100" :alt="banner.actName" :title="banner.actName">
       </div>
       <div class="bannerMark"></div>
-      <div class="search d-none d-sm-block">
+      <div class="search">
         <h3>臺灣節慶活動</h3>
-        <div class="searchInput">
+        <div class="searchInput d-none d-sm-block">
           <input class="mr-sm-2 mt-3 mt-sm-0" type="search" placeholder="請輸入節慶名稱" aria-label="Search" v-model="searchText" @keyup.enter="search(searchText)">
           <a @click.prevent="search(searchText)"><i class="fas fa-search"></i></a>
         </div>
@@ -23,7 +23,7 @@ export default {
   name: 'home',
   data () {
     return {
-      bannerData: [],
+      banner: {},
       searchText: '',
     }
   },
@@ -41,7 +41,8 @@ export default {
     const api = "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindFestivalTypeJ";
     vm.$http.get(api)
       .then(function(data) {
-        vm.bannerData = data.data.splice(0, 1);
+        vm.banner = data.data[0];
+        vm.banner.imageUrl = "https://cloud.culture.tw/" + vm.banner.imageUrl;
       });
   }
 }
