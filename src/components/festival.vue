@@ -1,5 +1,6 @@
 <template>
   <div class="container-md">
+    <breadcrumb></breadcrumb>
     <div class="card">
       <div class="row no-gutters">
         <div class="col-md-6">
@@ -27,6 +28,7 @@
 </template>
 
 <script>
+import breadcrumb from './breadcrumb.vue';
 export default {
   name: 'search',
   data () {
@@ -35,6 +37,9 @@ export default {
       festivals: [],
       newFestival: {}
     }
+  },
+  components: {
+    breadcrumb
   },
   created() {
     const vm = this;
@@ -64,7 +69,7 @@ export default {
   }
   .card {
     border: none;
-    padding: 2rem 0 3rem 0;
+    padding: 2rem 0;
     .green, .orange {
       display: inline-block;
       padding: 5px 10px;
@@ -78,7 +83,11 @@ export default {
       background-color: $color-orange1;
     }
     img {
+      width: 100%;
+      height: 100%;
+      max-height: 450px;
       border-radius: 5px;
+      object-fit: cover;
     }
     .card-body>a {
       color: $color-white;
