@@ -1,5 +1,6 @@
 <template>
   <div class="container-md">
+    <loading :active.sync="isLoading"></loading>
     <breadcrumb></breadcrumb>
     <div class="card">
       <div class="row no-gutters">
@@ -35,7 +36,8 @@ export default {
     return {
       id: this.$route.params.id,
       festivals: [],
-      newFestival: {}
+      newFestival: {},
+      isLoading: false
     }
   },
   components: {
@@ -44,6 +46,7 @@ export default {
   created() {
     const vm = this;
     const api = "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindFestivalTypeJ";
+    vm.isLoading = true;
     vm.$http.get(api)
       .then(function(data) {
         vm.festivals = data.data;
@@ -53,6 +56,7 @@ export default {
             vm.newFestival = item;
           }
         });
+        vm.isLoading = false;
       });
   },
 }

@@ -1,5 +1,6 @@
 <template>
   <div class="wrap">
+    <loading :active.sync="isLoading"></loading>
     <div class="banner">
       <div class="bannerImg">
         <img :src="banner.imageUrl" class="d-block w-100" :alt="banner.actName" :title="banner.actName">
@@ -25,6 +26,7 @@ export default {
     return {
       banner: {},
       searchText: '',
+      isLoading: false
     }
   },
   components: {
@@ -39,10 +41,12 @@ export default {
   created() {
     const vm = this;
     const api = "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindFestivalTypeJ";
+    vm.isLoading = true;
     vm.$http.get(api)
       .then(function(data) {
         vm.banner = data.data[4];
         vm.banner.imageUrl = "https://cloud.culture.tw/" + vm.banner.imageUrl;
+        vm.isLoading = false;
       });
   }
 }

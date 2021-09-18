@@ -1,5 +1,6 @@
 <template>
   <div class="container-md">
+    <loading :active.sync="isLoading"></loading>
     <div class="row">
       <div class="col-lg-4 col-sm-6 col-12 my-4" v-for="(item, key) in newFestivals" :key="key">
         <div class="card">
@@ -23,7 +24,8 @@ export default {
       festivals: [],
       searchText: '',
       international: '國際級',
-      nationwide: '全國級'
+      nationwide: '全國級',
+      isLoading: false
     }
   },
   methods: {
@@ -34,10 +36,11 @@ export default {
   created() {
     const vm = this;
     const api = "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindFestivalTypeJ";
-    
+    vm.isLoading = true;
     vm.$http.get(api)
       .then(function(data) {
         vm.festivals = data.data;
+        vm.isLoading = false;
       });
 
     if(vm.$route.params.searchText) {
