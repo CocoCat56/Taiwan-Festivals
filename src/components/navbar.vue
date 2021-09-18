@@ -2,7 +2,7 @@
   <nav class="navbar navbar-expand-sm navbar-light fixed-top
   " style="background-color: #fff;">
     <div class="container-md">
-      <router-link class="mr-4" to="/">FESTIVAL</router-link>
+      <router-link class="mr-4" to="/">Taiwan Festivals</router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
