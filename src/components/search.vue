@@ -1,12 +1,17 @@
 <template>
   <div class="container-md searchContent">
     <loading :active.sync="isLoading"></loading>
-    <h5>搜尋：{{searchText}} ，找到 {{result.length}} 筆資料</h5>
-    <div v-if="result.length == 0">
-      <h5 class="text-center"><i class="fas fa-search mr-2"></i>目前查無相關節慶活動</h5>
+    <div v-if="isLoading">
+      <h5 class="text-center"><i class="fas fa-search mr-2"></i>資料搜尋中</h5>
     </div>
     <div v-else>
-      <festivals></festivals>
+      <h5>搜尋：{{searchText}} ，找到 {{result.length}} 筆資料</h5>
+      <div v-if="result.length == 0">
+        <h5 class="text-center"><i class="fas fa-search mr-2"></i>目前查無相關節慶活動</h5>
+      </div>
+      <div v-else>
+        <festivals></festivals>
+      </div>
     </div>
   </div>
 </template>
