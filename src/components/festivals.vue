@@ -92,6 +92,9 @@ export default {
     h5 {
       font-size: 18px;
       cursor: pointer;
+      a:hover {
+        color: $color-orange;
+      }
     }
     &:hover {
       img {
@@ -100,9 +103,6 @@ export default {
       a {
         color: $color-orange;
       }
-    }
-    a:hover {
-      color: $color-orange;
     }
   }
 </style>
