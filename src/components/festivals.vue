@@ -101,5 +101,8 @@ export default {
         color: $color-orange;
       }
     }
+    a:hover {
+      color: $color-orange;
+    }
   }
 </style>

@@ -5,7 +5,7 @@
     <footer>
       <div class="container-md">
         <p>本站僅作品練習，圖資來源為文化部文化資料開放服務網，無任何商業營利用途</p>
-        <p>使用之資料集為<a href="https://opendata.culture.tw/frontsite/openData/detail?datasetId=413" target="_blank">文化部[2015-2021][藝文活動-節慶專區]</a></p>
+        <p>使用之資料集為<a href="https://opendata.culture.tw/frontsite/openData/detail?datasetId=413" target="_blank">文化部[2021][藝文活動-節慶專區]</a></p>
         <p>此開放資料依政府資料開放授權條款 (Open Government Data License) 進行公眾釋出，使用者於遵守本條款各項規定之前提下，得利用之。</p>
         <p>政府資料開放授權條款：<a href="https://data.gov.tw/license" target="_blank">https://data.gov.tw/license</a></p>
         <p>© 2021 All Right Reserved | Design by 
