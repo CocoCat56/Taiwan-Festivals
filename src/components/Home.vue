@@ -44,7 +44,7 @@ export default {
     vm.isLoading = true;
     vm.$http.get(api)
       .then(function(data) {
-        vm.banner = data.data[4];
+        vm.banner = data.data[0];
         vm.banner.imageUrl = "https://cloud.culture.tw/" + vm.banner.imageUrl;
         vm.isLoading = false;
       });
